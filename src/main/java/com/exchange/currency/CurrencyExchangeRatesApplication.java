@@ -10,7 +10,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @SpringBootApplication
 @EnableScheduling
-public class CurrencyExchangeRatesApplication {
+public final class CurrencyExchangeRatesApplication {
+
+    private CurrencyExchangeRatesApplication() {
+        // Private constructor to prevent instantiation
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(CurrencyExchangeRatesApplication.class, args);

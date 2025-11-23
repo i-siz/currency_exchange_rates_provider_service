@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: mock-exchange-service-1
+
+server:
+  port: ${SERVER_PORT:8081}
+
+logging:
+  level:
+    com.exchange.mock: INFO

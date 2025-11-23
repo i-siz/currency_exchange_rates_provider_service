@@ -9,7 +9,7 @@
         <!-- Admin user: admin/admin123 -->
         <insert tableName="users">
             <column name="username" value="admin"/>
-            <column name="password" value="$2a$10$8X8Y8Y8Y8Y8Y8Y8Y8Y8Y8uKJ8Y8Y8Y8Y8Y8Y8Y8Y8Y8Y8Y8Y8Y8Y8Y"/>
+            <column name="password" value="$2a$10$ggM5i.pXnC2zZmvXKAW3x.YGng/ieo4hlHG5M1Yk5YIf7.jQ1a5O2"/>
             <column name="email" value="admin@example.com"/>
             <column name="enabled" valueBoolean="true"/>
             <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
@@ -18,7 +18,7 @@
         <!-- Premium user: premium/premium123 -->
         <insert tableName="users">
             <column name="username" value="premium"/>
-            <column name="password" value="$2a$10$9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9uKJ9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z9Z"/>
+            <column name="password" value="$2a$10$lIiSEMxRKb8FICsXLt5w9OzoqZQkbpdctdJmV4iRV2OFte7vg0G2O"/>
             <column name="email" value="premium@example.com"/>
             <column name="enabled" valueBoolean="true"/>
             <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
@@ -27,7 +27,7 @@
         <!-- Regular user: user/user123 -->
         <insert tableName="users">
             <column name="username" value="user"/>
-            <column name="password" value="$2a$10$7W7W7W7W7W7W7W7W7W7W7uKJ7W7W7W7W7W7W7W7W7W7W7W7W7W7W7W"/>
+            <column name="password" value="$2a$10$Q427bSjF3HgMP/zgx6eaRumBSMCxVhRfeJHH00UbpUfFMUdpTnI5S"/>
             <column name="email" value="user@example.com"/>
             <column name="enabled" valueBoolean="true"/>
             <column name="created_at" valueDate="CURRENT_TIMESTAMP"/>
