@@ -26,7 +26,8 @@ class ExchangeRatesApiProviderWireMockTest {
 
     private WireMockServer wireMockServer;
     private ExchangeRatesApiProvider provider;
-    private static final String TEST_API_KEY = "test-exchangerates-key";
+    private RestTemplate restTemplate;
+    private static final String TEST_API_KEY = "test-api-key-12345";
 
     @BeforeEach
     void setUp() {
@@ -36,7 +37,8 @@ class ExchangeRatesApiProviderWireMockTest {
         WireMock.configureFor("localhost", wireMockServer.port());
 
         // Create provider with WireMock URL
-        provider = new ExchangeRatesApiProvider(new RestTemplate());
+        restTemplate = new RestTemplate();
+        provider = new ExchangeRatesApiProvider(restTemplate);
         ReflectionTestUtils.setField(provider, "apiUrl", 
                 "http://localhost:" + wireMockServer.port() + "/v1/latest");
         ReflectionTestUtils.setField(provider, "apiKey", TEST_API_KEY);

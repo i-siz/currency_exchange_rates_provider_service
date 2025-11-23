@@ -339,6 +339,7 @@ class ExchangeRateAggregatorServiceTest {
     }
 
     // Helper method to invoke private selectBestRate using the service's public methods
+    @SuppressWarnings("unchecked")
     private Optional<ExchangeRateDto> invokeSelectBestRate(List<ExchangeRateDto> rates) {
         // Use reflection to call private method
         try {

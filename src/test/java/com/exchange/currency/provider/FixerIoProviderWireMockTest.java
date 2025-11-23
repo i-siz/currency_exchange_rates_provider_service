@@ -26,6 +26,7 @@ class FixerIoProviderWireMockTest {
 
     private WireMockServer wireMockServer;
     private FixerIoProvider provider;
+    private RestTemplate restTemplate;
     private static final String TEST_API_KEY = "test-api-key-12345";
 
     @BeforeEach
@@ -36,7 +37,8 @@ class FixerIoProviderWireMockTest {
         WireMock.configureFor("localhost", wireMockServer.port());
 
         // Create provider with WireMock URL
-        provider = new FixerIoProvider(new RestTemplate());
+        restTemplate = new RestTemplate();
+        provider = new FixerIoProvider(restTemplate);
         ReflectionTestUtils.setField(provider, "apiUrl", 
                 "http://localhost:" + wireMockServer.port() + "/api/latest");
         ReflectionTestUtils.setField(provider, "apiKey", TEST_API_KEY);

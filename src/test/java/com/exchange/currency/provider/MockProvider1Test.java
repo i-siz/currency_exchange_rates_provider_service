@@ -26,6 +26,7 @@ class MockProvider1Test {
 
     private WireMockServer wireMockServer;
     private MockProvider1 provider;
+    private RestTemplate restTemplate;
 
     @BeforeEach
     void setUp() {
@@ -33,7 +34,8 @@ class MockProvider1Test {
         wireMockServer.start();
         WireMock.configureFor("localhost", wireMockServer.port());
 
-        provider = new MockProvider1(new RestTemplate());
+        restTemplate = new RestTemplate();
+        provider = new MockProvider1(restTemplate);
         ReflectionTestUtils.setField(provider, "baseUrl", "http://localhost:" + wireMockServer.port());
         ReflectionTestUtils.setField(provider, "enabled", true);
     }

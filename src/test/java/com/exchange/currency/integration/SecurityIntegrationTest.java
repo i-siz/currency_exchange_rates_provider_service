@@ -1,6 +1,5 @@
 package com.exchange.currency.integration;
 
-import com.exchange.currency.dto.CurrencyDto;
 import com.exchange.currency.service.CurrencyService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
