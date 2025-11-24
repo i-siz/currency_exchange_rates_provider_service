@@ -1,7 +1,6 @@
 package com.exchange.currency.integration;
 
 import com.exchange.currency.service.CurrencyService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,11 +49,8 @@ class SecurityIntegrationTest {
     private MockMvc mockMvc;
 
     @Autowired
-    private ObjectMapper objectMapper;
-
-    @Autowired
     private CurrencyService currencyService;
-
+    
     @Test
     @DisplayName("Public endpoint should be accessible without authentication")
     void publicEndpointShouldBeAccessibleWithoutAuth() throws Exception {
